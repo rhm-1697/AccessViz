@@ -1,0 +1,8 @@
+data/
+*.shp
+*.shx
+*.dbf
+*.prj
+*.gpkg
+__pycache__/
+.ipynb_checkpoints/
