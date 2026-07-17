@@ -13,7 +13,7 @@ AccessViz has four main components:
 
 This repository does **not** include the Travel Time Matrix data itself (13,000+ files, several GB) — it's excluded via `.gitignore`.
 
-1. Download the Travel Time Matrix dataset (2013 / 2015 / 2018) and the `MetropAccess_YKR_grid.shp` shapefile from the [source linked in the course materials].
+1. Download the Travel Time Matrix dataset (2013 / 2015 / 2018) and the `MetropAccess_YKR_grid.shp` shapefile from the https://blogs.helsinki.fi/accessibility/helsinki-region-travel-time-matrix/
 2. Extract the data into a folder named `data/` in the root of this project, so the structure looks like:
 
 ```
@@ -63,7 +63,7 @@ comparison(out_files, modes, comp_type, Comp_Output_Directory)
 - **NoData handling.** The dataset marks missing values as `-1`. This is preserved as-is through FileFinder and TableJoiner rather than converted to `NaN`, so each downstream function can decide how to treat it: Visualizer filters `-1` out before plotting; the Comparison tool explicitly forces any result row where either input was `-1` back to `-1`, per the assignment spec.
 - **Travel mode defaults.** Each travel mode (car, public transport, walking) maps to one specific time/distance column (see `columns` / `time_columns` / `distance_columns` dictionaries in the notebook). A midday time slice was chosen as the default for each mode; column choices are documented inline and can be edited for a different time-of-day or dataset year.
 - **Duplicate/missing ID handling.** FileFinder warns and skips duplicate IDs and IDs with no matching file, rather than failing the whole batch.
-- **Classification scheme.** Static maps use a `quantiles` classification scheme via `mapclassify`, chosen for [your reasoning — e.g. "producing evenly populated, readable class breaks across the skewed travel-time distribution"].
+- **Classification scheme.** Static maps use a `quantiles` classification scheme via `mapclassify`, chosen for producing evenly populated, readable class breaks across the skewed travel-time distribution"].
 
 ## Known limitations
 
