@@ -72,4 +72,4 @@ comparison(out_files, modes, comp_type, Comp_Output_Directory)
 
 ## Author
 
-[Your name] — GIS in Python course, [course/institution name]
+Rahul Madhukumar — Geo-Python and Automating GIS Processes (‘AutoGIS’) developed by the Department of Geosciences and Geography at the University of Helsinki, Finland. 
